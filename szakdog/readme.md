@@ -1,8 +1,8 @@
-\# WDIDo
+# WDIDo
 
 
 
-A WDIDo egy webalkalmazás, amely a szakdolgozati témaválasztásban elakadt diákok számára nyújt segítséget. Elsődleges célja, hogy inspirációt és segítséget nyújtson szoftverfejlesztő és -tesztelő tanulók számára a korábbi évfolyamok sikeres projektjeinek bemutatásával és segéd eszközök biztosításával.
+A WDIDo egy olyan webalkalmazás, amely a szakdolgozati témaválasztásban elakadt diákok számára nyújt segítséget. Elsődleges célja, hogy inspirációt és segítséget nyújtson szoftverfejlesztő és -tesztelő tanulók számára a korábbi évfolyamok sikeres projektjeinek bemutatásával és segéd eszközök biztosításával.
 
 
 
