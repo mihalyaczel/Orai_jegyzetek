@@ -33,7 +33,7 @@ header {
 
     #terminal-container {
         width: 90%;
-        font-size: 14px;
+        font-size: 11.5px;
     }
 
     #terminal-output {
@@ -110,7 +110,9 @@ header {
 
 #terminal-container {
     background-color: #181818;
-    height: 600px;
+    min-height: 450px;
+    max-height: auto;
+    padding-bottom: 30px;
     margin: auto;
     color: white;
     padding-top: 10px;
