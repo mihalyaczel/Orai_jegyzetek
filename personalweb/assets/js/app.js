@@ -1,7 +1,39 @@
+//#region DOM Elements
+
 const terminalOutput = document.getElementById('terminal-output');
 const terminalInput = document.getElementById('terminal-input');
 const cursorEffect = document.getElementById("cursor-effect");
+//#endregion
 
+//#region Keyboard Support
+document.addEventListener('keydown', (event) => {
+    if (event.key == "0") {
+        PrintAboutMe();
+    }
+
+    else if (event.key == "1") {
+        PrintContacts();
+    }
+    else if (event.key == "2") {
+        PrintProjects();
+    }
+    else if (event.key == "3") {
+        PrintKnowledge();
+    }
+});
+//#endregion
+
+//#region Phone Virtual Keyboard Support
+const terminalContainer = document.getElementById("terminal-container");
+const terminalInputField = document.getElementById("terminal-input-field");
+
+terminalContainer.addEventListener('click', () => {
+    terminalInputField.focus();
+    navigator.virtualKeyboard.show();
+});
+//#endregion
+
+//#region Blink Cursor Effect
 let CursorTimer = null;
 let cursorVisible = true;
 let CursorDisplayed = true;
@@ -16,11 +48,10 @@ function startBlinking() {
 }
 
 startBlinking();
+//#endregion
 
-
-
+//#region Terminal Text Typing Effect
 let typingInterval = null;
-
 
 function TypeTerminalText(text) {
 
@@ -66,7 +97,9 @@ function TypeTerminalHTML(plainText, htmlText) {
         }
     }, 20);
 }
+//#endregion
 
+//#region Data Display Functions
 
 // ABOUT ME
 function PrintAboutMe() {
@@ -84,7 +117,6 @@ function PrintAboutMe() {
     );
 }
 
-
 // CONTACTS
 function PrintContacts() {
     if (CursorDisplayed) {
@@ -96,11 +128,11 @@ function PrintContacts() {
     terminalInput.textContent = 'C:\\source>choose 1';
 
     TypeTerminalHTML(
-        'You can reach me through the following channels:\n- Email: aczelmihaly@proton.me\n- LinkedIn: linkedin.com/in/mihalyaczel/\n- GitHub: github.com/HiroshiKurogane',
-        'You can reach me through the following channels:<br>' +
-        '- Email: aczelmihaly@proton.me<br>' +
-        '- LinkedIn: <a style="text-decoration: none;" href="https://linkedin.com/in/mihalyaczel" target="_blank" rel="noopener noreferrer">linkedin.com/in/mihalyaczel</a><br>' +
-        '- GitHub: <a style="text-decoration: none;" href="https://github.com/HiroshiKurogane" target="_blank" rel="noopener noreferrer">github.com/HiroshiKurogane</a>'
+        'You can reach me through the following channels:\n\n\u00A0\u00A0- Email: aczelmihaly@proton.me\n\u00A0\u00A0- LinkedIn: mihalyaczel\n\u00A0\u00A0- GitHub: HiroshiKurogane',
+        'You can reach me through the following channels:<br><br>' +
+        '\u00A0\u00A0- Email: aczelmihaly@proton.me<br>' +
+        '\u00A0\u00A0- LinkedIn: <a style="text-decoration: none;" href="https://linkedin.com/in/mihalyaczel" target="_blank" rel="noopener noreferrer">mihalyaczel</a><br>' +
+        '\u00A0\u00A0- GitHub: <a style="text-decoration: none;" href="https://github.com/HiroshiKurogane" target="_blank" rel="noopener noreferrer">HiroshiKurogane</a>'
     );
 }
 
@@ -116,11 +148,11 @@ function PrintProjects() {
 
     terminalInput.textContent = 'C:\\source>choose 2';
 
-    TypeTerminalHTML('Some of my projects can be found on my GitHub profile:\n- RandomFoodGenerator\n- TempFolderCleaner',
+    TypeTerminalHTML('Some of my projects can be found on my GitHub profile:\n\nRandomFoodGenerator: A simple food generator developed in PHP. It\'s a fun project to generate random food ideas.\n\nTempFolderCleaner: A tool for cleaning temporary folders. Developed in C#, it helps users manage and clean up their temporary files efficiently.',
 
-        'Some of my projects can be found on my GitHub profile:<br>' +
-        '- <a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/RFG" target="_blank" rel="noopener noreferrer">RandomFoodGenerator</a><br>' +
-        '- <a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/TempFolderCleaner" target="_blank" rel="noopener noreferrer">TempFolderCleaner</a>'
+        'Some of my projects can be found on my GitHub profile:<br><br>' +
+        '<a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/RFG" target="_blank" rel="noopener noreferrer"><span style="text-decoration: underline;">RandomFoodGenerator</span></a>: A simple food generator developed in PHP. It\'s a fun project to generate random food ideas.<br><br>' +
+        '<a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/TempFolderCleaner" target="_blank" rel="noopener noreferrer"><span style="text-decoration: underline;">TempFolderCleaner</span></a>: A tool for cleaning temporary folders. Developed in C#, it helps users manage and clean up their temporary files efficiently.'
     );
 }
 
@@ -136,6 +168,9 @@ function PrintKnowledge() {
     terminalInput.textContent = 'C:\\source>choose 3';
 
     TypeTerminalText(
-        '- C#\n- Python\n- PHP\n- SQL\n- Git/GitHub\n- Object-Oriented Programming (OOP)'
+        'Languages and Technologies:\n\u00A0\u00A0- C#: desktop and web applications\n\u00A0\u00A0- Python: automatizations, desktop apps\n\u00A0\u00A0- PHP: Simple applications\n-------------------------------------\nDatabase handling and planing:\n\u00A0\u00A0- SQL \n\u00A0\u00A0- SQLite \n\u00A0\u00A0- MSSQL \n------------------------------------- \n Version Control:\n\u00A0\u00A0- Git/GitHub'
+        // \u00A0\u00A0 means (non-breaking space)*2
     );
 }
+
+//#endregion
