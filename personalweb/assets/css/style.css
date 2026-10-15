@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #242424;
-    font-family:'Cascadia Mono';
+    font-family: 'Cascadia Mono';
 }
 
 header {
@@ -14,31 +14,53 @@ header {
 
 @media (max-width: 951px) {
     .nav-link {
-        font-size: 8px;
-        margin-top: 8px;
+        font-size: 10px;
+        margin-top: 6px;
         margin-right: 12px;
     }
 
     #signature {
         height: 20px;
-    } 
+        margin-left: -5px;
+    }
+
+    #terminal-title-container {
+        width: 90%;
+    }
+
+    #terminal-container {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #terminal-output {
+        width: 90%;
+    }
 }
 
 @media (min-width: 951px) {
     .nav-link {
         font-size: 20px;
-        margin-top: 20px;
+        margin-top: 16px;
         margin-right: 40px;
     }
 
     #signature {
         height: 50px;
-    } 
-}
+        margin-left: 10px;
+    }
 
+    #terminal-title-container {
+        width: 80%;
+    }
 
-#signature {
-    margin-left: 10px;
+    #terminal-container {
+        width: 80%;
+    }
+
+    #terminal-output {
+        width: 70%;
+    }
 }
 
 .nav-link {
@@ -57,11 +79,11 @@ header {
 }
 
 #terminal-title {
-  font-family:'Cascadia Mono';
-  font-size: 20px;
-  padding-top: 10px;
-  padding-left: 16px;
-  position: relative;
+    font-family: 'Cascadia Mono';
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 16px;
+    position: relative;
 }
 
 .terminal-icon {
@@ -71,8 +93,7 @@ header {
 
 #terminal-title-container {
     background-color: #121212;
-    width: 80%;
-    height:40px;
+    height: 40px;
     margin: auto;
     color: white;
     margin-bottom: 0;
@@ -82,20 +103,18 @@ header {
 
 #terminal-container {
     background-color: #1f1f1f;
-    width: 80%;
     height: 600px;
     margin: auto;
     color: white;
     padding-top: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    border-radius:  0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
 }
 
 #terminal-output {
     margin: auto;
     color: white;
     margin-left: 10px;
-    width: 70%;
     transition: 0.3s;
     white-space: pre-line;
 }
