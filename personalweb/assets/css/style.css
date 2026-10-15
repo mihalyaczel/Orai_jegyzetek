@@ -1,15 +1,59 @@
 body {
     margin: 0;
-    background-color: #2f2f2f;
+    background-color: #242424;
     font-family:'Cascadia Mono';
 }
 
 header {
-    background-color: #272727;
+    background-color: #181818;
     padding: 20px;
     margin: 0;
     color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 951px) {
+    .nav-link {
+        font-size: 8px;
+        margin-top: 8px;
+        margin-right: 12px;
+    }
+
+    #signature {
+        height: 20px;
+    } 
+}
+
+@media (min-width: 951px) {
+    .nav-link {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+
+    #signature {
+        height: 50px;
+    } 
+}
+
+
+#signature {
+    margin-left: 10px;
+}
+
+.nav-link {
+    color: white;
+    outline: none;
+    text-decoration: none;
+    float: right;
+    transition: 0.3s;
+
+}
+
+.nav-link:hover {
+    color: #afafaf;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #terminal-title {
@@ -45,24 +89,6 @@ header {
     padding-top: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     border-radius:  0 0 8px 8px;
-}
-
-.nav-link {
-    color: white;
-    outline: none;
-    text-decoration: none;
-    margin-top: 20px;
-    margin-right: 40px;
-    font-size: 20px;
-    float: right;
-    transition: 0.3s;
-
-}
-
-.nav-link:hover {
-    color: #afafaf;
-    transform: scale(1.1);
-    cursor: pointer;
 }
 
 #terminal-output {
