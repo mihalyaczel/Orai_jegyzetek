@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>My Personal Website</title>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/images/signature.png" style="height: 50px; margin-left: 10px;">
+        <a class="nav-link" onclick="PrintKnowledge();">Knowledge</a>
+        <a class="nav-link" onclick="PrintProjects();">Projects</a>
+        <a class="nav-link" onclick="PrintContacts();">Contacts</a>
+        <a class="nav-link" onclick="PrintAboutMe();">About Me</a>
+    </header>
+    <div align="center" style="text-align: left; margin-top: 50px;">
+        <div id="terminal-title-container">
+            <p id="terminal-title">Terminal
+                <img class="terminal-icon" src="./assets/images/exit.png" style="float:right;">
+                <img class="terminal-icon" src="./assets/images/layers.png" style="float:right;">
+                <img class="terminal-icon" src="./assets/images/minimize.png" style="float:right;">
+            </p>
+
+        </div>
+        <div id="terminal-container">
+            <p style="margin-left: 10px; margin-bottom: 0px;">GitHub Database Terminal [Version 10.0.26200.9445]</p>
+            <p style="margin-left: 10px; margin-top: 5px;"> (c) GitHub Corporation. All rights reserved.</p>
+
+            <p style="margin-left: 10px; margin-top: 30px; margin-bottom: 0px;">[0] About me</p>
+            <p style="margin-left: 10px; margin-bottom: 0px; margin-top: 8px;">[1] Contacts</p>
+            <p style="margin-left: 10px; margin-bottom: 0px; margin-top: 8px;">[2] Projects</p>
+            <p style="margin-left: 10px; margin-top: 8px;">[3] Knowledge</p>
+
+            <p id="terminal-input" style="margin-left: 10px;">C:\source>choose</p>
+            <section id="terminal-output">
+            </section>
+
+        </div>
+
+        <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

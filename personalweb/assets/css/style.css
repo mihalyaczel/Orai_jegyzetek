@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background-color: #353535;
+    font-family:'Cascadia Mono';
+}
+
+header {
+    background-color: #2c2c2c;
+    padding: 20px;
+    margin: 0;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#terminal-title {
+  font-family:'Cascadia Mono';
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.terminal-icon {
+    width: 20px;
+    margin-right: 20px;
+}
+
+#terminal-title-container {
+    background-color: #2c2c2c;
+    width: 80%;
+    height:40px;
+    margin: auto;
+    color: white;
+    margin-bottom: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 8px 0 0;
+}
+
+#terminal-container {
+    background-color: #1f1f1f;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    color: white;
+    padding-top: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius:  0 0 8px 8px;
+}
+
+.nav-link {
+    color: white;
+    outline: none;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 40px;
+    font-size: 20px;
+    float: right;
+    transition: 0.3s;
+
+}
+
+.nav-link:hover {
+    color: #afafaf;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#terminal-output {
+    margin: auto;
+    color: white;
+    margin-left: 10px;
+    width: 70%;
+    transition: 0.3s;
+    white-space: pre-line;
+}
+
+#terminal-output a {
+    color: #dfe7ff;
+    text-decoration: underline;
+}
+
+#terminal-output a:hover {
+    color: white;
+    text-decoration: underline;
+}
