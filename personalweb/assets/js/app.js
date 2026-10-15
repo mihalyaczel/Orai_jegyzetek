@@ -1,5 +1,23 @@
 const terminalOutput = document.getElementById('terminal-output');
 const terminalInput = document.getElementById('terminal-input');
+const cursorEffect = document.getElementById("cursor-effect");
+
+let CursorTimer = null;
+let cursorVisible = true;
+let CursorDisplayed = true;
+
+function startBlinking() {
+    if (CursorTimer) return; // Prevent multiple timers
+
+    CursorTimer = setInterval(() => {
+        cursorEffect.style.visibility = cursorVisible ? "hidden" : "visible";
+        cursorVisible = !cursorVisible;
+    }, 500);
+}
+
+startBlinking();
+
+
 
 let typingInterval = null;
 
@@ -52,6 +70,13 @@ function TypeTerminalHTML(plainText, htmlText) {
 
 // ABOUT ME
 function PrintAboutMe() {
+
+    if (CursorDisplayed) {
+        cursorEffect.style.display = "none";
+        CursorDisplayed = false;
+        clearInterval(CursorTimer);
+    }
+
     terminalInput.textContent = 'C:\\source>choose 0';
 
     TypeTerminalText(
@@ -62,6 +87,12 @@ function PrintAboutMe() {
 
 // CONTACTS
 function PrintContacts() {
+    if (CursorDisplayed) {
+        cursorEffect.style.display = "none";
+        CursorDisplayed = false;
+        clearInterval(CursorTimer);
+    }
+
     terminalInput.textContent = 'C:\\source>choose 1';
 
     TypeTerminalHTML(
@@ -76,6 +107,13 @@ function PrintContacts() {
 
 // PROJECTS
 function PrintProjects() {
+    if (CursorDisplayed) {
+        cursorEffect.style.display = "none";
+        CursorDisplayed = false;
+        clearInterval(CursorTimer);
+    }
+
+
     terminalInput.textContent = 'C:\\source>choose 2';
 
     TypeTerminalHTML('Some of my projects can be found on my GitHub profile:\n- RandomFoodGenerator\n- TempFolderCleaner',
@@ -89,6 +127,12 @@ function PrintProjects() {
 
 // KNOWLEDGE
 function PrintKnowledge() {
+    if (CursorDisplayed) {
+        cursorEffect.style.display = "none";
+        CursorDisplayed = false;
+        clearInterval(CursorTimer);
+    }
+
     terminalInput.textContent = 'C:\\source>choose 3';
 
     TypeTerminalText(
