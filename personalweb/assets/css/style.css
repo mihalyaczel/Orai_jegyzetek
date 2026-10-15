@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #242424;
-    font-family: 'Cascadia Mono';
+    font-family: 'Cascadia Mono', monospace;
 }
 
 header {
@@ -88,7 +88,6 @@ header {
 }
 
 #terminal-title {
-    font-family: 'Cascadia Mono';
     font-size: 20px;
     padding-top: 10px;
     padding-left: 16px;
