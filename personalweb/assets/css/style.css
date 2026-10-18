@@ -11,6 +11,20 @@ header {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+#terminal-input-field::-webkit-outer-spin-button,
+#terminal-input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#terminal-input-field {
+    width: 0px;
+    height: 0px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
 @media (max-width: 950px) {
     header {
         padding: 5px;
@@ -67,7 +81,7 @@ header {
     }
 
     #terminal-output {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -136,4 +150,8 @@ header {
 #terminal-output a:hover {
     color: white;
     text-decoration: underline;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
