@@ -148,11 +148,22 @@ function PrintProjects() {
 
     terminalInput.textContent = 'C:\\source>choose 2';
 
-    TypeTerminalHTML('Some of my projects can be found on my GitHub profile:\n\nRandomFoodGenerator: A simple food generator developed in PHP. It\'s a fun project to generate random food ideas.\n\nTempFolderCleaner: A tool for cleaning temporary folders. Developed in C#, it helps users manage and clean up their temporary files efficiently.',
+    TypeTerminalHTML(
+        'Some of my projects can be found on my GitHub profile:\n\n\n' +
+        'RandomFoodGenerator\n\n' +
+        'A simple food generator developed in PHP. It\'s a fun project to generate random food ideas.\n\n' +
+        '[View source]\n\n\n\n' +
+        'TempFolderCleaner\n\n' +
+        'A tool for cleaning temporary folders. Developed in C#, it helps users manage and clean up their temporary files efficiently.\n\n' +
+        '[View source]\n\n',
 
-        'Some of my projects can be found on my GitHub profile:<br><br>' +
-        '<a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/RFG" target="_blank" rel="noopener noreferrer"><span style="text-decoration: underline;">RandomFoodGenerator</span></a>: A simple food generator developed in PHP. It\'s a fun project to generate random food ideas.<br><br>' +
-        '<a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/TempFolderCleaner" target="_blank" rel="noopener noreferrer"><span style="text-decoration: underline;">TempFolderCleaner</span></a>: A tool for cleaning temporary folders. Developed in C#, it helps users manage and clean up their temporary files efficiently.'
+        'Some of my projects can be found on my GitHub profile:<br><br><br>' +
+        '<span style="text-decoration: underline;">RandomFoodGenerator</span><br><br>' +
+        'A simple food generator developed in PHP. It\'s a fun project to generate random food ideas.<br><br>' +
+        '[<a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/RFG" target="_blank" rel="noopener noreferrer">View source</a>]<br><br><br><br>' +
+        '<span style="text-decoration: underline;">TempFolderCleaner</span><br><br>' +
+        'A tool for cleaning temporary folders. Developed in C#, it helps users manage and clean up their temporary files efficiently.<br><br>' +
+        '[<a style="text-decoration: none;" href="https://github.com/HiroshiKurogane/TempFolderCleaner" target="_blank" rel="noopener noreferrer">View source</a>]'
     );
 }
 

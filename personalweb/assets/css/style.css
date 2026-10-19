@@ -81,7 +81,7 @@ header {
     }
 
     #terminal-output {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -150,4 +150,8 @@ header {
 #terminal-output a:hover {
     color: white;
     text-decoration: underline;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
